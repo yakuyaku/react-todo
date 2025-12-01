@@ -1,6 +1,6 @@
 import { create } from 'zustand';
 import { persist, createJSONStorage } from 'zustand/middleware';
-import type { Todo, Priority, FilterType, SortType } from '../types/todo';
+import type { Todo, FilterType, SortType } from '../types/todo';
 import { useToastStore } from './useToastStore';
 
 interface TodoState {

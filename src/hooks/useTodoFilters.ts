@@ -1,6 +1,5 @@
 import { useMemo } from 'react';
 import { useTodoStore } from '../stores/useTodoStore';
-import type { Todo } from '../types/todo';
 
 export function useTodoFilters() {
   const { todos, filter, sortBy, searchQuery } = useTodoStore();

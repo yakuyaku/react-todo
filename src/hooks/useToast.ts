@@ -1,19 +1,19 @@
-import { useToastStore, ToastType } from '../stores/useToastStore';
+import { useToastStore } from '../stores/useToastStore';
 
 export function useToast() {
   const { addToast } = useToastStore();
 
   return {
-    success: (message: string, duration?: number) => 
-      addToast({ type: 'success', message, duration }),
-    
-    error: (message: string, duration?: number) => 
-      addToast({ type: 'error', message, duration }),
-    
-    warning: (message: string, duration?: number) => 
-      addToast({ type: 'warning', message, duration }),
-    
-    info: (message: string, duration?: number) => 
-      addToast({ type: 'info', message, duration }),
+    success: (message: string) =>
+      addToast({ type: 'success', message }),
+
+    error: (message: string) =>
+      addToast({ type: 'error', message }),
+
+    warning: (message: string) =>
+      addToast({ type: 'warning', message }),
+
+    info: (message: string) =>
+      addToast({ type: 'info', message }),
   };
 }
