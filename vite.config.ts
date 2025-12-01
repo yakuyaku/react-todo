@@ -12,6 +12,7 @@ export default defineConfig({
       brotliSize: true,
     }),
   ],
+  base: '/',  // 중요! Vercel에서는 루트 경로 
   build: {
     rollupOptions: {
       output: {
