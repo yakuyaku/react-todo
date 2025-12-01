@@ -12,6 +12,24 @@ export default defineConfig({
       brotliSize: true,
     }),
   ],
+  test: {
+    globals: true,
+    environment: 'jsdom',
+    setupFiles: './src/tests/setup.ts',
+    css: true,
+    coverage: {
+      provider: 'v8',
+      reporter: ['text', 'json', 'html'],
+      exclude: [
+        'node_modules/',
+        'src/tests/',
+        '**/*.d.ts',
+        '**/*.config.*',
+        '**/mockData',
+        'src/main.tsx',
+      ],
+    },
+  },  
   base: '/',  // 중요! Vercel에서는 루트 경로 
   build: {
     rollupOptions: {
